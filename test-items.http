@@ -1,0 +1,46 @@
+### GET homepage
+GET http://localhost:8080/
+Accept: text/html
+
+### GET available slots
+GET http://localhost:8080/slots
+Accept: text/html
+
+### GET all appointments
+GET http://localhost:8080/appointments
+Accept: text/html
+
+### GET booking form
+GET http://localhost:8080/book
+Accept: text/html
+
+### POST book slot 1 as user 2
+POST http://localhost:8080/book
+Content-Type: application/x-www-form-urlencoded
+
+slotId=1&userId=2
+
+### POST cancel appointment 1
+POST http://localhost:8080/appointments/1/cancel
+Accept: text/html
+
+### POST send notification for appointment 1
+POST http://localhost:8080/appointments/1/notify
+Accept: text/html
+
+### POST directly to mock notification service
+POST http://localhost:8080/api/notifications/send
+Content-Type: application/json
+
+{
+  "appointmentId": 1,
+  "recipientEmail": "tester@studio.com",
+  "recipientName": "Vincent Do",
+  "serviceName": "Game QA Testing: Optimization Tests",
+  "slotTime": "2026-01-01 12:00 - 2026-06-01 12:00",
+  "messageType": "BOOKING_CONFIRMATION"
+}
+
+### GET health check
+GET http://localhost:8080/health
+Accept: application/json
