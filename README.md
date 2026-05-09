@@ -1,7 +1,6 @@
 # Game QA Test Reservation System
 
-CMPE 172 Term Project — San Jose State University  
-Vincent Do (017277416)
+CMPE 172 Term Project — San Jose State University — Vincent Do
 
 ## Overview
 
